@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تسجيل الدخول</title>
+    <title>Login</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,15 +56,15 @@
 </head>
 <body>
     <div class="login-box">
-        <h2>تسجيل الدخول</h2>
+        <h2>Login</h2>
         <form method="POST" action="/login">
             @csrf
-            <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-            <input type="password" name="password" placeholder="كلمة المرور" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
             @if ($errors->any())
                 <div class="error">{{ $errors->first() }}</div>
             @endif
-            <button type="submit">دخول</button>
+            <button type="submit">Login</button>
         </form>
     </div>
 </body>

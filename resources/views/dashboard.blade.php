@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوحة التحكم</title>
+    <title>Dashboard</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -47,16 +47,16 @@
 </head>
 <body>
     <div class="navbar">
-        <h1>لوحة التحكم</h1>
+        <h1>Dashboard</h1>
         <form method="POST" action="/logout">
             @csrf
-            <button type="submit">تسجيل الخروج</button>
+            <button type="submit">Logout</button>
         </form>
     </div>
     <div class="content">
         <div class="card">
-            <h2>مرحباً، {{ auth()->user()->name }} 👋</h2>
-            <p>أنت الآن داخل لوحة التحكم بنجاح.</p>
+            <h2>Welcome, {{ auth()->user()->name }} 👋</h2>
+            <p>You have successfully logged in.</p>
         </div>
     </div>
 </body>
